@@ -2,12 +2,6 @@
     min-height: 500px;
     padding: 70px 0 70px 0;
     background-color: #F6F6F6;
-    &__title{
-        font-weight: 700;
-        font-size: 30px;
-        text-align: center;
-        color: #0D0D0D;
-    }
     &__wrapper{
         margin-top: 64px;
         display: flex;
@@ -38,5 +32,4 @@
             color: $main-color;
         }
     }
-
 }
