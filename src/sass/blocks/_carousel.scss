@@ -5,7 +5,7 @@
         width: 750px;
         margin: 0 auto;
     }
-    .slick-prev, .slick-next{
+    .prev, .next{
         position: absolute;
         border: none;
         top: 50%;
@@ -18,12 +18,29 @@
             height: 50px;
         }
     }
-    .slick-next{
+    .next{
         left: auto;
         right: -66px;
     }
-    .slick-dots{
-        position: absolute;
-        border: none;
+    .tns-item {
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .tns-nav{
+        padding-top: 15px;
+        text-align: center;
+        button{
+            border: none;
+            margin: 0 7px 0 7px;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            outline: none;
+        }
+        .tns-nav-active{
+            background-color: $main-color;
+        }
     }
 }
