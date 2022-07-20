@@ -9,6 +9,10 @@
     color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
+    transition: 0.5s all;
+    &:hover{
+        background-color: #AE0000;
+    }
     &_main{
         margin-top: 66px;
         width: 300px;
