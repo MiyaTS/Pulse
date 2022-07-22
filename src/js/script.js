@@ -16,6 +16,8 @@
     });
   }); */
 
+    //slider
+
     const slider = tns({
         container: '.carousel__inner',
         items: 1,
@@ -37,6 +39,8 @@
 
     $(document).ready(function(){
 
+        //tabs
+
         $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
             $(this)
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -55,5 +59,51 @@
 
         toggleSlide('.catalog-item__link');
         toggleSlide('.catalog-item__back');
+
+        //modal
+
+        $('[data-modal=consultation]').on('click', function(){
+            $('.overlay, #consultation').fadeIn('slow');
+        });
+        $('.modal__close').on('click', function(){
+            $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        });
+
+        $('.button_mini').each(function(i){
+            $(this).on('click', function(){
+                $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+                $('.overlay, #order').fadeIn('slow');
+            })
+        });
+
+        //validation
+
+        function validateForms(form){
+            $(form).validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 3
+                    },
+                    phone : "required",
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    name: "Пожайлуста, введите свое имя",
+                    phone: "Пожайлуста, введите свой номер телефона",
+                    email: {
+                      required: "Пожайлуста, введите свой email",
+                      email: "Ваш email должен быть в формате name@domain.com"
+                    }
+                  }
+            });
+        }
+
+        validateForms('#consultation form');
+        validateForms('#consultation-form');
+        validateForms('#order form');
     }); 
 
