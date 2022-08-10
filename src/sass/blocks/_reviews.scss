@@ -3,12 +3,17 @@
     &-block{
         display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		margin-top: 60px;
         &__round{
-            width: 169px;
-            height: 169px;
-            margin-right: 60px;
+            img{
+                width: 175px;
+                height: 175px;
+                margin-right: 60px;
+            }
+        }
+        &__text{
+            width: 90%;
         }
         &__title{
             font-weight: 700;
@@ -22,7 +27,6 @@
             margin-bottom: 10px;
         }
         &__descr{
-            width: 680px;
             font-weight: 300;
             font-size: 16px;
             line-height: 24px;

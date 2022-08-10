@@ -144,5 +144,9 @@
             $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
             return false;
         });
+
+        //wow.js
+
+        new WOW().init();
     
     }); 
