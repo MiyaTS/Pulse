@@ -272,6 +272,37 @@
         padding: 60px 0 60px 0;
     }
     .catalog{
+        &-item{
+            min-height: 400px;
+            width: 280px;
+            &__reverse{
+                &_list{
+                    padding-left: 9px;
+                    li{
+                        font-size: 13px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            &__price{
+                font-size: 16px;
+            }
+            .button_mini{
+                height: 40px;
+            }
+            &__link{
+                font-size: 13px;
+            }
+            &__subtitle{
+                font-size: 15px;
+            }
+            &__img{
+                height: 150px;
+            }
+            &__descr{
+               font-size: 12px;
+            }
+        }
         &__tabs{
             margin-top: 20px;
             flex-direction: column;
