@@ -139,11 +139,16 @@
 
         // smooth scroll
 
-        $("a[href=#up]").click(function(){
-            const _href = $(this).attr("href");
-            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-            return false;
-        });
+        function smoothScroll(e){
+            $(e).click(function(){
+                const _href = $(this).attr("href");
+                $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+                return false;
+            }); 
+        }
+
+        smoothScroll("a[href=#up]");
+        smoothScroll("a[href=#catalog-id]");
 
         //wow.js
 
